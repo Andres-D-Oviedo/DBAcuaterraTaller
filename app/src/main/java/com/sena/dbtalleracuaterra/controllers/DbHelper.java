@@ -1,4 +1,4 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.controllers;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

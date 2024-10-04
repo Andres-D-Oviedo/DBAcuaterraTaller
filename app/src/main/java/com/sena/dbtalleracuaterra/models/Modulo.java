@@ -1,4 +1,4 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.models;
 
 public class Modulo {
     private int id;
@@ -11,6 +11,14 @@ public class Modulo {
     // Constructor
     public Modulo(int id, String volumen, int numPeces, String especiePeces, int numPlantas, String especiePlantas) {
         this.id = id;
+        this.volumen = volumen;
+        this.numPeces = numPeces;
+        this.especiePeces = especiePeces;
+        this.numPlantas = numPlantas;
+        this.especiePlantas = especiePlantas;
+    }
+
+    public Modulo(String volumen, int numPeces, String especiePeces, int numPlantas, String especiePlantas) {
         this.volumen = volumen;
         this.numPeces = numPeces;
         this.especiePeces = especiePeces;

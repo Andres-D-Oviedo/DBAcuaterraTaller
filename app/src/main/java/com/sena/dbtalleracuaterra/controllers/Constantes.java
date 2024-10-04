@@ -1,4 +1,4 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.controllers;
 
 //Esta clase contendrá los nombres de la base de datos, tablas, y columnas.
 public class Constantes {

@@ -1,4 +1,4 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.models;
 
 public class Sensor {
     private int id;
@@ -7,7 +7,7 @@ public class Sensor {
     private String fecha;
 
     // Constructor
-    public Sensor(int id, String tipo, String dato, String fecha) {
+    public Sensor(String tipo, String dato, String fecha) {
         this.id = id;
         this.tipo = tipo;
         this.dato = dato;

@@ -1,9 +1,13 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.controllers;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.sena.dbtalleracuaterra.models.Modulo;
+import com.sena.dbtalleracuaterra.models.Sensor;
+import com.sena.dbtalleracuaterra.models.Usuario;
 
 import java.util.ArrayList;
 

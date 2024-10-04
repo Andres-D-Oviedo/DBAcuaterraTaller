@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.SensorActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FORMULARIO DE SENSOR"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        />
+
+    <EditText
+        android:id="@+id/edtTipoSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo de Sensor" />
+
+    <EditText
+        android:id="@+id/edtDatoSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dato del Sensor" />
+
+    <EditText
+        android:id="@+id/edtFechaSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha del Dato" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnInsertarSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insertar" />
+
+        <Button
+            android:id="@+id/btnVolverHomeSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a Menú"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.models;
 
 public class Usuario {
     private int id;

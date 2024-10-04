@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.UsuarioActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FORMULARIO DE USUARIO"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        />
+
+    <EditText
+        android:id="@+id/edtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/edtCelular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celular" />
+
+    <EditText
+        android:id="@+id/edtFechaNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de Nacimiento" />
+
+    <EditText
+        android:id="@+id/edtRol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rol" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnInsertar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insertar" />
+
+        <Button
+            android:id="@+id/btnVolverHome1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a Menú"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

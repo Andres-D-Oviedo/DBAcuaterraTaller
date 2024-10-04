@@ -1,42 +1,39 @@
-package com.sena.dbtalleracuaterra;
+package com.sena.dbtalleracuaterra.views;
+
+import static android.app.ProgressDialog.show;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
+import com.sena.dbtalleracuaterra.R;
+import com.sena.dbtalleracuaterra.controllers.ManagerDB;
+import com.sena.dbtalleracuaterra.models.Usuario;
 
-import java.util.ArrayList;
+public class UsuarioActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
-
-    // Variables para los elementos de la UI
-    private Button btnInsertar;
     private EditText edtNombre, edtEmail, edtCelular, edtFechaNacimiento, edtRol;
     private ManagerDB managerDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_usuario);
 
         // Inicializar ManagerDB para gestionar la base de datos
         managerDB = new ManagerDB(getApplicationContext());
 
         // Referenciar los componentes de la interfaz de usuario
-        btnInsertar = findViewById(R.id.btnInsertar);
+        // Variables para los elementos de la UI
+        Button btnInsertar = findViewById(R.id.btnInsertar);
         edtNombre = findViewById(R.id.edtNombre);
         edtEmail = findViewById(R.id.edtEmail);
         edtCelular = findViewById(R.id.edtCelular);
@@ -62,14 +59,23 @@ public class MainActivity extends AppCompatActivity {
 
                     // Insertar el usuario en la base de datos
                     managerDB.insertarUsuario(usuario);
-                    Toast.makeText(MainActivity.this, "Usuario insertado correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UsuarioActivity.this, "Usuario insertado correctamente", Toast.LENGTH_SHORT).show();
 
                     // Limpiar los campos de texto
                     limpiarCampos();
                 } else {
                     // Mostrar mensaje si hay campos vacíos
-                    Toast.makeText(MainActivity.this, "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UsuarioActivity.this, "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+
+        Button buttonVolver = findViewById(R.id.btnVolverHome1);
+        buttonVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Finaliza la actividad actual y vuelve a la anterior.
             }
         });
 
@@ -83,4 +89,5 @@ public class MainActivity extends AppCompatActivity {
         edtFechaNacimiento.setText("");
         edtRol.setText("");
     }
+
 }
